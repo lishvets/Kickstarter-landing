@@ -17,14 +17,19 @@
 @import "./block/features";
 
 * {
-  box-sizing: border-box;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 body {
-  background: $c-gray;
   margin: 0;
   padding: 0;
+  background: $c-gray;
+
+  &:has(.page__menu:target) {
+    overflow: hidden;
+    height: 100vh;
+  }
 }
 
 .main {

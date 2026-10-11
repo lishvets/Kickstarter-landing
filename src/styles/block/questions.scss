@@ -4,14 +4,17 @@
   }
 
   &__title {
-    font-family: Inter, sans-serif;
     margin: 0;
+    padding-bottom: 27px;
+
+    grid-column: span 3;
+
+    font-family: Inter, sans-serif;
     font-size: 30px;
     font-weight: 700;
     line-height: 40px;
+
     text-align: left;
-    padding-bottom: 27px;
-    grid-column: span 3;
 
     @include on-tablet {
       grid-column: span 4;
@@ -45,47 +48,70 @@
 
   &__mail {
     margin-bottom: 20px;
+    padding: 12px 20px;
+
+    font-family: Inter, sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     text-align: left;
-    font-family: Inter, sans-serif;
-    padding: 12px 20px;
+
     outline: none;
-    
+
     &:focus {
       border: 1px solid $hover-blue;
+    }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0 1000px $white-color inset;
+      transition: background-color 5000s ease-in-out 0s;
+
+      -webkit-text-fill-color: inherit;
     }
   }
 
   &__textarea {
+    height: 128px;
     margin-bottom: 30px;
+    padding: 12px 20px;
+
+    font-family: Inter, sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    text-align: left;
-    font-family: Inter, sans-serif;
-    padding: 12px 20px;
-    height: 128px;
+
     resize: none;
-    outline: none;
+    text-align: left;
+
     border: 1px solid #828282;
+
+    outline: none;
 
     &:focus {
       border: 1px solid $hover-blue;
     }
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0 1000px $white-color inset;
+      transition: background-color 5000s ease-in-out 0s;
+
+      -webkit-text-fill-color: inherit;
+    }
   }
 
   &__button {
-    width: 102px;
-    background-color: $blue-color;
-    border: none;
-
     cursor: pointer;
+    width: 102px;
+    border: none;
+    background-color: $blue-color;
 
     &:hover {
-      background-color: $hover-blue;
       transform: scale(1.1);
+      background-color: $hover-blue;
     }
   }
 }

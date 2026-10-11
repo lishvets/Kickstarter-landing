@@ -1,32 +1,32 @@
-'use strict';
+"use strict";
 
 /* global Swiper */ // Додаємо, щоб ESLint не скаржився на невідомий Swiper
 
 // eslint-disable-next-line no-unused-vars
-const swiper = new Swiper('.features__swiper', {
+const swiper = new Swiper(".features__swiper", {
   loop: true, // Зациклення
   navigation: {
-    nextEl: '.features__btn--next',
-    prevEl: '.features__btn--prev',
+    nextEl: ".features__btn--next",
+    prevEl: ".features__btn--prev",
   },
   on: {
-    init: function() {
+    init: function () {
       const totalSlides = this.slides.length;
 
-      document.querySelector('.swiper-pagination-total').textContent
-      = totalSlides.toString().padStart(2, '0');
+      document.querySelector(".swiper-pagination-total").textContent =
+        totalSlides.toString().padStart(2, "0");
 
       const currentSlide = this.realIndex + 1;
 
-      document.querySelector('.swiper-pagination-current').textContent
-      = currentSlide.toString().padStart(2, '0');
+      document.querySelector(".swiper-pagination-current").textContent =
+        currentSlide.toString().padStart(2, "0");
     },
-    slideChange: function() {
+    slideChange: function () {
       // Оновлюємо числову пагінацію
       const currentSlide = this.realIndex + 1; // Поточний слайд
 
-      document.querySelector('.swiper-pagination-current').textContent
-      = currentSlide.toString().padStart(2, '0');
+      document.querySelector(".swiper-pagination-current").textContent =
+        currentSlide.toString().padStart(2, "0");
     },
   },
 });

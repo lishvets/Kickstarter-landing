@@ -6,42 +6,51 @@
   }
 
   &__title {
-    text-transform: uppercase;
-    display: block;
     z-index: 2;
-    margin-block: 285px 0;
     height: 156px;
+    margin-block: 285px 0;
 
+    display: block;
     grid-column: 1 / -1;
+
+    font-family: Inter, sans-serif;
     font-size: 40px;
     font-weight: 700;
     line-height: 52px;
+    text-transform: uppercase;
 
     @include on-tablet {
       grid-column: span 4;
-      line-height: 62px;
-      font-size: 48px;
-      margin-top: 131.23px;
+
       height: 186px;
+      margin-top: 131.23px;
+
+      font-size: 48px;
+      line-height: 62px;
     }
 
     @include on-desctop {
-      line-height: 78px;
-      font-size: 62px;
-      margin-top: 171px;
       height: 234px;
+      margin-top: 171px;
+      font-size: 62px;
+      line-height: 78px;
     }
   }
 
   &__text {
     z-index: 2;
+
     display: block;
-    margin: 0;
     grid-column: 1 / -1;
-    font-size: 16px;
-    line-height: 24px;
-    margin-top: 20px;
+
     height: 120px;
+    margin: 0;
+    margin-top: 20px;
+
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
 
     @include on-tablet {
       grid-column: 1 / 4;
@@ -50,24 +59,27 @@
   }
 
   &__image {
-    height: 245px;
+    position: absolute;
+
     width: 100%;
+
+    top: 76px;
+    right: auto;
+    left: 0;
+
+    height: 245px;
     max-width: 431px;
+
     object-fit: cover;
     object-position: left;
-    position: absolute;
-    top: 76px;
-
-    left: 0;
-    right: auto;
-
 
     @include on-tablet {
-      height: 317px;
-      max-width: 429.39px;
       top: 200.23px;
       right: 30px;
       left: auto;
+
+      max-width: 429.39px;
+      height: 317px;
     }
 
     @include on-desctop {
